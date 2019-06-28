@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ProfileActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:orientation="vertical"
+                android:background="@drawable/black_border"
+                android:layout_width="match_parent"
+                android:layout_height="210dp">
+
+                <TextView
+                    android:textColor="#1F2124"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="150dp"
+                    android:textSize="15sp"
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:text="PROFIL"/>
+                <ImageView
+                    android:src="@drawable/profile"
+                    android:id="@+id/imageprofil"
+                    android:layout_marginLeft="118dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="128dp"
+                    android:layout_height="120dp" />
+                <TextView
+                    android:background="@drawable/black_border"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginLeft="118dp"
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:text="      modifier profil"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:layout_below="@id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:id="@+id/voirann"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/voirannonce"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                    <TextView
+                        android:id="@+id/voirannonce"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Voir mes annonces"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/creerann"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/add"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Créer une annonce"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/voirpack"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/pack"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Voir packs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/voirprom"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/prom"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Voir promoteurs favoris"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/note"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp">
+                    <ImageView
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/note"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp" />
+                    <TextView
+                        android:textSize="18dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="6dp"
+                        android:text="Voir notes"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <include layout="@layout/bottom_navigation"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

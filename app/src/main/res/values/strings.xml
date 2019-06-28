@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Immo</string>
+    <string name="title_activity_explore">ExploreActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Favoris</string>
+    <string name="title_notifications">Profil</string>
+    <string name="search">Trouver votre programme immolier neuf pour vire ou investir</string>
+
+
+
+</resources>
