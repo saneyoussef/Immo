@@ -8,14 +8,14 @@
         android:layout_alignParentBottom="true">
 
 
-        <android.support.design.widget.BottomNavigationView
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/bottomNavViewBar"
             android:background="#E8E8E8"
             app:menu="@menu/bottom_nav_menu"
             >
-        </android.support.design.widget.BottomNavigationView>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </LinearLayout>
 
