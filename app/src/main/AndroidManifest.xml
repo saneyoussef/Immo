@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.immo">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
 
     <application
         android:allowBackup="true"
@@ -15,18 +17,25 @@
         <activity android:name=".VoirNoteActivity" />
         <activity android:name=".ImagesActivity" />
         <activity android:name=".CreerAnnonceActivity" />
+        <activity android:name=".DetailsPartnerActivity"></activity>
+        <activity android:name=".DetailsGoldActivity" />
+        <activity android:name=".DetailsBasicActivity" />
+        <activity android:name=".company_inscrip">
+        </activity>
+        <activity android:name=".Indivi_inscrip" />
+        <activity android:name=".S_inscrireActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".FavorisActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MessagesActivity" />
         <activity android:name=".AcceuilActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
     </application>
 
