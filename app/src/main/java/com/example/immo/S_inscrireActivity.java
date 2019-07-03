@@ -1,32 +1,33 @@
 package com.example.immo;
 
 import android.content.Intent;
-import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class S_inscrireActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_s_inscrire);
         getSupportActionBar().hide();
-        Button login=(Button) findViewById(R.id.btn_login);
-        Button inscrire=(Button) findViewById(R.id.btn_inscrire);
-        login.setOnClickListener(new View.OnClickListener() {
+
+        Button indiv= (Button) findViewById(R.id.indiv_btn);
+        Button comp= (Button) findViewById(R.id.comp_btn);
+
+        indiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,LoginActivity.class);
+                Intent i=new Intent(S_inscrireActivity.this,Indivi_inscrip.class);
                 startActivity(i);
             }
         });
-        inscrire.setOnClickListener(new View.OnClickListener() {
+        comp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(MainActivity.this,S_inscrireActivity.class);
+                Intent i=new Intent(S_inscrireActivity.this,company_inscrip.class);
                 startActivity(i);
             }
         });

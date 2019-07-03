@@ -15,6 +15,7 @@
         android:layout_marginTop="200dp"
         android:src="@drawable/villa" />
     <Button
+        android:id="@+id/btn_inscrire"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
