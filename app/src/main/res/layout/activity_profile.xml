@@ -88,6 +88,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp" />
                     <TextView
+                        android:id="@+id/creerannonce"
                         android:textSize="18dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="6dp"
@@ -128,6 +129,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp" />
                     <TextView
+                        android:id="@+id/promoteur"
                         android:textSize="18dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="6dp"
@@ -148,6 +150,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp" />
                     <TextView
+                        android:id="@+id/notee"
                         android:textSize="18dp"
                         android:layout_marginLeft="7dp"
                         android:layout_marginTop="6dp"

@@ -1,18 +1,20 @@
 package com.example.immo;
 
 import android.content.Context;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-
-import com.example.immo.BottomNavigationViewHelpar;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class ProfileActivity extends AppCompatActivity {
 
+    TextView create , note , prom ;
     private  static final String TAG = "Profile";
     private static final int ACTIVITY_NUM = 3;
     private Context mcontext = ProfileActivity.this ;
@@ -23,6 +25,30 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         Log.d(TAG,"onCreate: started!");
         setupBottonNavigationView();
+        prom = (TextView) findViewById(R.id.promoteur);
+        note = (TextView) findViewById(R.id.notee);
+        create = (TextView) findViewById(R.id.creerannonce);
+        create.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this,CreerAnnonceActivity.class);
+                startActivity(intent);
+            }
+        });
+        note.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this,VoirNoteActivity.class);
+                startActivity(intent);
+            }
+        });
+        prom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this,PromoteurFavActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

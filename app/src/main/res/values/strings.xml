@@ -5,7 +5,12 @@
     <string name="title_dashboard">Favoris</string>
     <string name="title_notifications">Profil</string>
     <string name="search">Trouver votre programme immolier neuf pour vire ou investir</string>
+    <string-array name="pays">
+        <item>Tunisie</item>
+    </string-array>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
