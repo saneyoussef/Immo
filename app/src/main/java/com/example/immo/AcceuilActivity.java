@@ -8,6 +8,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -18,16 +21,18 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class AcceuilActivity extends AppCompatActivity {
+
+    List<bien> lsBien;
 
     private  static final String TAG = "HomeActivity";
     private static final int ACTIVITY_NUM = 0;
     private Context mcontext = AcceuilActivity.this ;
 
-    private GridView gridView;
-    private GridViewAdapter gridAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,19 +41,31 @@ public class AcceuilActivity extends AppCompatActivity {
         getSupportActionBar().hide();
         Log.d(TAG , "onCreate : starting.");
         setupBottonNavigationView();
+        lsBien = new ArrayList<>();
+        lsBien.add(new bien("les oliviers","03/2020","9590DT","Tunis",
+                R.drawable.image1));
+        lsBien.add(new bien("berbes des champs","08/2022","100000DT","Monastir",
+                R.drawable.image3));
+        lsBien.add(new bien("les champs","01/2023","80900DT","Sousse",
+                R.drawable.image4));
+        lsBien.add(new bien("les trois m","05/2025","70920DT","Mahdia",
+                R.drawable.image1));
+        lsBien.add(new bien("Inferno","12/2023","99888DT","Gabes",
+                R.drawable.image3));
+        lsBien.add(new bien("paradice","07/2026","1000000DT","Sidibouzid",
+                R.drawable.image1));
+        lsBien.add(new bien("montécalo dram","09/2029","700500DT","Ariana",
+                R.drawable.image4));
+        lsBien.add(new bien("lueur d'espoir","09/2021","200500DT","Sfax",
+                R.drawable.image1));
 
-        gridView = (GridView) findViewById(R.id.gridView);
-        gridAdapter = new GridViewAdapter(this, R.layout.grid_item_layout, getData());
-        gridView.setAdapter(gridAdapter);
-
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(),VuAnnonceActivity.class);
-            startActivity(intent);
-            }
-        });
+        RecyclerView myrv = (RecyclerView) findViewById(R.id.recyclerviewid);
+        RecyclerViewAdapter myAdapter = new RecyclerViewAdapter(this,lsBien);
+        myrv.setLayoutManager(new GridLayoutManager(this,2));
+        myrv.setAdapter(myAdapter);
 }
+
+/**
 
     private ArrayList<ImageItem> getData(){
         final ArrayList<ImageItem> imageItems = new ArrayList<>();
@@ -64,7 +81,7 @@ public class AcceuilActivity extends AppCompatActivity {
         }
         return imageItems;
 
-    }
+    }**/
 
     private void setupBottonNavigationView(){
         Log.d(TAG , "setupBottonNavigationView: setting up BottomNavigationView");

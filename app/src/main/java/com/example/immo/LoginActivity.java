@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit =new Retrofit.Builder()
+                /**   Retrofit retrofit =new Retrofit.Builder()
                         .baseUrl("http://192.168.1.6:8080/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
@@ -39,9 +39,9 @@ public class LoginActivity extends AppCompatActivity {
                 authService= retrofit.create(AuthService.class);
                 //getPosts();
                 //getComments();
-                authenticateUser(username, password);
-               /** Intent i=new Intent(LoginActivity.this,AcceuilActivity.class);
-                startActivity(i);**/
+                authenticateUser(username, password);**/
+                Intent i=new Intent(LoginActivity.this,AcceuilActivity.class);
+                startActivity(i);
 
             }
 
