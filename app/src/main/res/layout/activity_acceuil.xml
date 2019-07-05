@@ -36,10 +36,11 @@
             android:onClick="perform_action"
             />
         </LinearLayout>
-        <GridView
-            android:id="@+id/gridView"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewid"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:columnWidth="100dp"
             android:drawSelectorOnTop="true"
@@ -50,6 +51,7 @@
             android:focusable="true"
             android:clickable="true"/>
         </LinearLayout>
+
         <include layout="@layout/bottom_navigation"/>
 
 
