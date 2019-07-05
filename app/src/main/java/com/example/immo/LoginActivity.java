@@ -47,8 +47,8 @@ public class LoginActivity extends AppCompatActivity {
                 authenticateUser(username, password);
 
 
-               Intent i=new Intent(LoginActivity.this,TestActivity.class);
-                startActivity(i);
+               Intent i=new Intent(LoginActivity.this,AcceuilActivity.class);
+               startActivity(i);
 
 
 
