@@ -2,6 +2,8 @@ package com.example.immo;
 
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,6 +30,9 @@ public class LoginActivity extends AppCompatActivity {
         final TextView username=(TextView) findViewById(R.id.input_email);
         final TextView password=(TextView) findViewById(R.id.input_password);
         Button login=(Button) findViewById(R.id.login_btn);
+
+        final String NAME = "name";
+
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,11 +42,14 @@ public class LoginActivity extends AppCompatActivity {
                         .build();
 
                 authService= retrofit.create(AuthService.class);
-                //getPosts();
-                //getComments();
+
                 authenticateUser(username, password);
-               /** Intent i=new Intent(LoginActivity.this,AcceuilActivity.class);
-                startActivity(i);**/
+
+
+               Intent i=new Intent(LoginActivity.this,TestActivity.class);
+                startActivity(i);
+
+
 
             }
 
@@ -54,7 +62,13 @@ public class LoginActivity extends AppCompatActivity {
                 response.enqueue(new Callback<JwtResponse>() {
                     @Override
                     public void onResponse(Call<JwtResponse> call, Response<JwtResponse> response) {
-                        Toast.makeText(getApplicationContext(),"" + response.body().getJwttoken(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"" + response.body().getJwttoken(),                       Toast.LENGTH_LONG).show();
+
+                        SharedPreferences sharedPreferences=getSharedPreferences("SHARED_PREFS",                                 MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                        editor.putString("Token",response.body().getJwttoken());
+                        editor.commit();
                     }
 
                     @Override
