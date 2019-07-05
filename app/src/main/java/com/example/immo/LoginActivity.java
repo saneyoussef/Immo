@@ -36,12 +36,13 @@ public class LoginActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit =new Retrofit.Builder()
+               Retrofit retrofit =new Retrofit.Builder()
                         .baseUrl("http://192.168.1.6:8080/")
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
                 authService= retrofit.create(AuthService.class);
+
 
                 authenticateUser(username, password);
 

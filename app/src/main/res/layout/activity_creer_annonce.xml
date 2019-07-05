@@ -274,11 +274,7 @@
             android:id="@+id/mybutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Click me!"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="importer docs!"/>
+            android:text="importImage"/>
         <EditText
             android:textSize="20dp"
             android:layout_width="wrap_content"

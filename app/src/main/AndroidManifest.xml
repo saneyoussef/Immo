@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".TestActivity"></activity>
-        <activity android:name=".VuAnnonceActivity" />
+        <activity android:name=".BienActivity"></activity>
         <activity android:name=".PromoteurFavActivity" />
         <activity android:name=".VoirNoteActivity" />
         <activity android:name=".ImagesActivity" />
