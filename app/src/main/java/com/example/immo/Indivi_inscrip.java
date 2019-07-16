@@ -26,6 +26,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Indivi_inscrip extends AppCompatActivity {
 
+
+
     AuthService authService;
 
     @Override
@@ -38,7 +40,9 @@ public class Indivi_inscrip extends AppCompatActivity {
         final EditText pass = (EditText) findViewById(R.id.pass_user);
         final EditText pass2 = (EditText) findViewById(R.id.pass2user);
 
+
         Button inscrit = (Button) findViewById(R.id.user_inscrip);
+
 
         inscrit.setOnClickListener(new View.OnClickListener() {
             @Override

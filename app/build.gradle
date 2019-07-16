@@ -43,4 +43,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.1.0'
     implementation 'com.google.android.gms:play-services-maps:16.1.0'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.droidninja:filepicker:1.0.0'
+    implementation 'com.shaishavgandhi:login-buttons:0.1.1'
 }

@@ -21,6 +21,8 @@ import com.example.immo.Service.AuthService;
 
 public class LoginActivity extends AppCompatActivity {
 
+    TextView textView ;
+
     AuthService authService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         final TextView username=(TextView) findViewById(R.id.input_email);
         final TextView password=(TextView) findViewById(R.id.input_password);
         Button login=(Button) findViewById(R.id.login_btn);
+
 
         final String NAME = "name";
 
@@ -44,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
                 authService= retrofit.create(AuthService.class);
 
 
-                authenticateUser(username, password);
+              //  authenticateUser(username, password);
 
 
                Intent i=new Intent(LoginActivity.this,AcceuilActivity.class);
@@ -54,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
 
             }
 
-            private void authenticateUser(TextView username, TextView password) {
+           /** private void authenticateUser(TextView username, TextView password) {
                 JwtRequest jwtRequest = new JwtRequest();
                 jwtRequest.setUsername(username.getText().toString());
                 jwtRequest.setPassword(password.getText().toString());
@@ -78,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     }
                 });
-            }
+            } */
         });
 
     }
