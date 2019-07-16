@@ -17,6 +17,8 @@ import com.example.immo.Service.AuthService;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -25,7 +27,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Indivi_inscrip extends AppCompatActivity {
-
+    private final static String BASE_URL = "http://192.168.1.6:8080/";
     AuthService authService;
 
     @Override
@@ -44,13 +46,31 @@ public class Indivi_inscrip extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl("http://192.168.1.6:8080/")
+                        .baseUrl(BASE_URL)
                         .addConverterFactory(GsonConverterFactory.create())
                         .build();
 
                 authService = retrofit.create(AuthService.class);
 
-                registerUser(username, email, pass, pass2);
+                if (username.getText().toString().length()<3) {
+                    Toast.makeText(getApplicationContext(), "vous devez saisir un nom d'utilisateur valide", Toast.LENGTH_LONG).show();
+                }
+                String masque = "^[a-zA-Z]+[a-zA-Z0-9\\._-]*[a-zA-Z0-9]@[a-zA-Z]+"
+                        + "[a-zA-Z0-9\\._-]*[a-zA-Z0-9]+\\.[a-zA-Z]{2,4}$";
+                Pattern pattern = Pattern.compile(masque);
+                Matcher  controler = pattern.matcher(email.getText().toString());
+                if (!controler.matches()){
+                    Toast.makeText(getApplicationContext(), "vous devez saisir un mail valide", Toast.LENGTH_LONG).show();}
+                 else if (pass.getText().toString().length()<8||pass.getText().toString().length()>15) {
+                    Toast.makeText(getApplicationContext(), "le mot de passe doit etre entre 8 et 15 caractéres", Toast.LENGTH_LONG).show();
+                } else if (pass2.getText().toString().isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "vous devez retapez votre mot de passe", Toast.LENGTH_LONG).show();
+                }
+
+
+                else {
+                    registerUser(username, email, pass, pass2);
+                }
             }
 
             public void registerUser(TextView username, TextView email, TextView pass, TextView pass2) {
@@ -73,12 +93,13 @@ public class Indivi_inscrip extends AppCompatActivity {
                 response.enqueue(new Callback<RegisterResponse>() {
                     @Override
                     public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
-                        if (response.body() != null) {
-                            Toast.makeText(getApplicationContext(), "Bienvenue "+response.body().getUsername(), Toast.LENGTH_LONG).show();
+                        if(response.body()==null){
+                            Toast.makeText(getApplicationContext(), "les mots de passe ne sont pas identiques", Toast.LENGTH_LONG).show();
+
+
+                        } else {
                             Intent i = new Intent(Indivi_inscrip.this,LoginActivity.class);
                             startActivity(i);
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Erreur lors du l'inscription", Toast.LENGTH_LONG).show();
                         }
 
 

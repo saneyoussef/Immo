@@ -12,14 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.immo.Models.AnnonceResponse;
+
 import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
     private Context mcontext ;
-    private List<bien> mData ;
+    private List<AnnonceResponse> mData ;
 
-    public RecyclerViewAdapter(Context context , List<bien> list){
+    public RecyclerViewAdapter(Context context , List<AnnonceResponse> list){
         this.mcontext = context ;
         this.mData = list ;
     }
@@ -35,21 +37,22 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
-        holder.nom.setText(mData.get(position).getNom());
-        holder.date.setText(mData.get(position).getDatee());
-        holder.prix.setText(mData.get(position).getPrice());
-        holder.ville.setText(mData.get(position).getVillee());
-        holder.img.setImageResource(mData.get(position).getThumbnail());
+        holder.type.setText(mData.get(position).getCategory().toString());
+        holder.date.setText(mData.get(position).getDateDeLivraison().toString());
+        holder.location.setText(mData.get(position).getLocation().getVille());
+        holder.rating.setText(Integer.toString(mData.get(position).getRating()));
+        holder.img.setImageResource(R.drawable.image1);
+
 
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mcontext,BienActivity.class);
-                intent.putExtra("nom",mData.get(position).getNom());
-                intent.putExtra("date",mData.get(position).getDatee());
-                intent.putExtra("prix",mData.get(position).getPrice());
-                intent.putExtra("ville",mData.get(position).getVillee());
-                intent.putExtra("thumbnail",mData.get(position).getThumbnail());
+                intent.putExtra("nom",mData.get(position).getCategory());
+                intent.putExtra("date",mData.get(position).getDateDeLivraison());
+                intent.putExtra("location",mData.get(position).getLocation().getVille());
+                intent.putExtra("rating",mData.get(position).getRating());
+                //intent.putExtra("thumbnail",mData.get(position).getThumbnail());
                 mcontext.startActivity(intent);
             }
         });
@@ -62,19 +65,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView nom;
+        TextView rating;
+        TextView type ;
+        TextView location ;
         TextView date ;
-        TextView prix ;
-        TextView ville ;
         ImageView img ;
         CardView cardView ;
 
         public MyViewHolder(View itemView){
             super(itemView);
-            nom = (TextView) itemView.findViewById(R.id.nompduprojet);
-            date = (TextView) itemView.findViewById(R.id.date);
-            prix = (TextView) itemView.findViewById(R.id.prix);
-            ville = (TextView) itemView.findViewById(R.id.ville);
+            type = (TextView) itemView.findViewById(R.id.typeImmo);
+            date = (TextView) itemView.findViewById(R.id.livraison);
+            location = (TextView) itemView.findViewById(R.id.localisation);
+            rating = (TextView) itemView.findViewById(R.id.rating);
             img = (ImageView) itemView.findViewById(R.id.imagebien);
             cardView = (CardView) itemView.findViewById(R.id.cardviewid);
         }

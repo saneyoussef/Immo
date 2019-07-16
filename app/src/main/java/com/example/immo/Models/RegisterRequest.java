@@ -28,6 +28,10 @@ public class RegisterRequest {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getRepeatPassword() {
         return repeatPassword;
     }
@@ -36,9 +40,7 @@ public class RegisterRequest {
         this.repeatPassword = repeatPassword;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+
 
     public String getEmail() {
         return email;

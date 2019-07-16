@@ -32,51 +32,45 @@
             android:background="@color/colorPrimaryDark"/>
         </RelativeLayout>
             <TextView
+                android:id="@+id/rating"
                 android:textColor="#c72e45"
                 android:textSize="13dp"
-                android:id="@+id/nompduprojet"
-                android:layout_width="match_parent"
+                         android:layout_width="match_parent"
                 android:gravity="center"
                 android:layout_height="19dp"
-                android:text="nomduprojet"/>
+                />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="18dp">
+
             <TextView
-                android:textColor="#8F2D56"
-                android:textAlignment="textEnd"
-                android:textSize="14dp"
-                android:text="prévu pour le:  "
-                android:layout_width="98dp"
-                android:layout_height="match_parent" />
-            <TextView
+                android:id="@+id/typeImmo"
                 android:textColor="#218380"
                 android:textSize="14dp"
-                android:id="@+id/date"
+                android:layout_gravity="center"
+
+                android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textAlignment="textStart"
-                android:text="date"/>
+ />
         </LinearLayout>
 
         <TextView
+            android:id="@+id/localisation"
             android:textColor="#bf209f"
             android:textSize="14dp"
-            android:id="@+id/prix"
-            android:layout_width="80dp"
+            android:layout_width="wrap_content"
             android:layout_height="20dp"
-            android:textAlignment="center"
-            android:layout_marginLeft="40dp"
-            android:text="prix"/>
+            android:layout_gravity="center" />
         <TextView
+            android:id="@+id/livraison"
             android:textColor="#218380"
             android:textSize="14dp"
-            android:id="@+id/ville"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:text="avenue"/>
+            />
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"

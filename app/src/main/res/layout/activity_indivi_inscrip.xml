@@ -30,6 +30,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:inputType=""
         android:hint="Email"/>
 
     <EditText
@@ -38,7 +39,8 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:hint="mot de passe"/>
+        android:hint="mot de passe"
+        android:inputType="textPassword"/>
 
     <EditText
         android:id="@+id/pass2user"
@@ -46,6 +48,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:inputType="textPassword"
         android:hint="confirmation mot de passe"/>
 
     <Button

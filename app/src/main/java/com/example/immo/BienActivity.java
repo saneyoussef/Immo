@@ -49,8 +49,8 @@ public class BienActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String nomm = intent.getExtras().getString("nom");
         String datee = intent.getExtras().getString("date");
-        String prixx = intent.getExtras().getString("prix");
-        String villee = intent.getExtras().getString("ville");
+        String prixx = intent.getExtras().getString("location");
+        String villee = intent.getExtras().getString("rating");
         int thumbnaill = intent.getExtras().getInt("thumbnail");
 
       nom.setText(nomm);
