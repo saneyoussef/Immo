@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/carviewvoir"
+    android:clickable="true"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/monimage"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            
+            <TextView
+                android:layout_marginTop="7dp"
+                android:id="@+id/montext"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:text="Les berges du lac"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+                <ImageView
+                    android:layout_marginBottom="10dp"
+                    android:tint="#C65146"
+                    android:src="@drawable/ic_rowdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/bouton_deleate"
+                    android:textSize="7sp"
+                    android:text="effacer"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+                <Button
+                    android:background="@drawable/bouton_edit"
+                    android:textSize="7sp"
+                    android:text="modifier"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="65dp"
+                    android:layout_height="35dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

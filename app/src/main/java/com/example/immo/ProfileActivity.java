@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    TextView create , note , prom ;
+    TextView create , note , prom , voir;
     private  static final String TAG = "Profile";
     private static final int ACTIVITY_NUM = 3;
     private Context mcontext = ProfileActivity.this ;
@@ -25,6 +25,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         Log.d(TAG,"onCreate: started!");
         setupBottonNavigationView();
+        voir = (TextView) findViewById(R.id.voirannonce);
         prom = (TextView) findViewById(R.id.promoteur);
         note = (TextView) findViewById(R.id.notee);
         create = (TextView) findViewById(R.id.creerannonce);
@@ -46,6 +47,13 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(ProfileActivity.this,PromoteurFavActivity.class);
+                startActivity(intent);
+            }
+        });
+        voir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this,VoirannonceActivity.class);
                 startActivity(intent);
             }
         });

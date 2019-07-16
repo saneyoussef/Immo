@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context=".Company_inscrip">
 
     <LinearLayout
@@ -13,23 +14,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Welcome"
-            android:gravity="center"
-            android:textSize="40dp"/>
+       <ImageView
+           android:src="@drawable/iconinscri"
+           android:layout_gravity="center"
+           android:layout_width="150dp"
+           android:layout_height="150dp" />
 
         <EditText
+            android:background="@drawable/rechercher_textview"
             android:id="@+id/CompanyUser"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="30dp"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center"
-            android:hint="Username"/>
+            android:hint=" Nom d'utilisateur"/>
 
         <Spinner
+            android:layout_marginTop="20dp"
             android:id="@+id/spinner1"
             android:layout_width="300dp"
             android:layout_gravity="center"
@@ -39,53 +40,68 @@
 
 
         <EditText
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rechercher_textview"
             android:id="@+id/EntreName"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center"
-            android:hint="Entreprise"/>
+            android:hint=" Entreprise"/>
 
 
 
         <EditText
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rechercher_textview"
             android:id="@+id/companyMail"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center"
-            android:hint="Email"/>
+            android:hint=" Email"/>
+
         <EditText
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rechercher_textview"
             android:id="@+id/companyTel"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:inputType="phone"
             android:layout_gravity="center"
-            android:hint="Numero tel"/>
+            android:hint=" Numero tel"/>
 
 
         <EditText
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rechercher_textview"
             android:id="@+id/company_password"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:inputType="textPassword"
             android:hint="mot de passe"/>
 
+
         <EditText
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rechercher_textview"
             android:id="@+id/company_password1"
             android:layout_width="300dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:inputType="textPassword"
             android:hint="confirmation mot de passe"/>
 
         <TextView
+            android:textColor="#090707"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
-            android:text="Member type"/>
+            android:text="choisissez un pack"/>
 
 
         <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -118,6 +134,7 @@
 
 
             <RadioGroup
+                android:layout_marginTop="10dp"
  android:id="@+id/typePack"
                 android:layout_width="wrap_content"
                 android:orientation="horizontal"
@@ -159,16 +176,45 @@
 
         </LinearLayout>
         <Button
+            android:textColor="#ffffff"
             android:id="@+id/inscriptionCompany"
             android:layout_marginTop="40dp"
-            android:layout_width="150dp"
-            android:background="@drawable/login_buttons"
-            android:layout_height="wrap_content"
+            android:layout_width="300dp"
+            android:background="@drawable/loginavecfacebook"
+            android:layout_height="40dp"
             android:layout_gravity="center"
             android:text="S'inscrire"/>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <TextView
+                android:text="________________________________________________________"
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="vous avez deja un compte?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#333030"
+                    android:text="  connectrez vous"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
 
+
+
+    </LinearLayout>
 
 
 

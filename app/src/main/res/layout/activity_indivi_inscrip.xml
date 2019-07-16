@@ -6,58 +6,95 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#ffffff"
     tools:context=".Indivi_inscrip">
 
-    <TextView
+    <ImageView
         android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:gravity="center"
-        android:textSize="40dp"/>
-
-    <EditText
-        android:id="@+id/name_user"
-        android:layout_marginTop="80dp"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:src="@drawable/iconinscri"
         android:layout_gravity="center"
-        android:hint="Username"/>
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
 
     <EditText
+        android:background="@drawable/rechercher_textview"
+        android:id="@+id/name_user"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:hint=" Nom d'utilisateur"
+        android:textColorHint="#7C7877"/>
+
+    <EditText
+        android:background="@drawable/rechercher_textview"
+        android:textColorHint="#7C7877"
         android:id="@+id/mail_user"
         android:layout_marginTop="30dp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:inputType=""
         android:hint="Email"/>
 
     <EditText
+        android:background="@drawable/rechercher_textview"
+        android:textColorHint="#7C7877"
         android:id="@+id/pass_user"
         android:layout_marginTop="30dp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:hint="mot de passe"
         android:inputType="textPassword"/>
 
+
     <EditText
+        android:background="@drawable/rechercher_textview"
+        android:textColorHint="#7C7877"
         android:id="@+id/pass2user"
         android:layout_marginTop="30dp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:inputType="textPassword"
         android:hint="confirmation mot de passe"/>
 
+
     <Button
+        android:textColor="#ffffff"
         android:id="@+id/user_inscrip"
         android:layout_marginTop="40dp"
-        android:layout_width="150dp"
-        android:background="@drawable/login_buttons"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:background="@drawable/loginavecfacebook"
+        android:layout_height="40dp"
         android:layout_gravity="center"
         android:text="S'inscrire"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <TextView
+            android:text="________________________________________________________"
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="vous avez deja un compte?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textStyle="bold"
+                android:textColor="#333030"
+                android:text="  connectrez vous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

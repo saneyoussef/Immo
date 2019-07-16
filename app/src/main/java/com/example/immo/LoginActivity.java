@@ -50,8 +50,12 @@ public class LoginActivity extends AppCompatActivity {
     TextView noAccount;
     TextView reset;
 
+
     private LoginButton loginFb;
     private CallbackManager callbackManager;
+
+    TextView textView ;
+
     AuthService authService;
 
     @Override
@@ -76,6 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
 
 
 
@@ -129,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                 authService = retrofit.create(AuthService.class);
 
 
-                authenticateUser(username, password);
+              //  authenticateUser(username, password);
 
 
 
@@ -137,7 +142,11 @@ public class LoginActivity extends AppCompatActivity {
 
             }
 
-            private void authenticateUser(EditText username, EditText password) {
+
+           /** private void authenticateUser(EditText username, EditText password) {
+
+            private void authenticateUser(TextView username, TextView password) {
+>>>>>>> 1ee1ff605d4db7877422a95c37e3d49f31ab668b
                 JwtRequest jwtRequest = new JwtRequest();
                 jwtRequest.setUsername(username.getText().toString());
                 jwtRequest.setPassword(password.getText().toString());
@@ -183,8 +192,13 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "fuuuuck" , Toast.LENGTH_LONG).show();
 
                     }
-                });**/
+
+                });
             }
+
+                });
+            } **/
+
         });
 
 
