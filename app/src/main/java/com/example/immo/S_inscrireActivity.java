@@ -28,7 +28,7 @@ public class S_inscrireActivity extends AppCompatActivity {
         comp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(S_inscrireActivity.this, company_inscrip.class);
+                Intent i=new Intent(S_inscrireActivity.this, Company_inscrip.class);
                 startActivity(i);
             }
         });

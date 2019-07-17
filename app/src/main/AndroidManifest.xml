@@ -15,24 +15,18 @@
 
         <activity android:name=".ResetPasswordActivity"></activity>
         <activity android:name=".LoginActivityTest"></activity>
-
         <activity android:name=".inscription"></activity>
         <activity android:name=".ModifierProfilClientActivity" />
         <activity android:name=".MonAnnonceActivity" />
         <activity android:name=".VoirannonceActivity" />
         <activity android:name=".PhotoActivity" />
-
         <activity android:name=".TestActivity" />
         <activity android:name=".BienActivity" />
         <activity android:name=".PromoteurFavActivity" />
         <activity android:name=".VoirNoteActivity" />
 
         <activity android:name=".CreerAnnonceActivity" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
         <activity android:name=".DetailsPartnerActivity" />
         <activity android:name=".DetailsGoldActivity" />
@@ -41,13 +35,19 @@
         <activity android:name=".Indivi_inscrip"></activity>
 
 
-        <activity android:name=".company_inscrip" />
 
         <activity android:name=".S_inscrireActivity" />
         <activity android:name=".SearchActivity" />
         <activity android:name=".FavorisActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".MessagesActivity" />
+        <activity android:name=".MessagesActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".AcceuilActivity" />
         <activity android:name=".LoginActivity">
 
