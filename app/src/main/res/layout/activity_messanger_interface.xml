@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MessangerInterface">
+
+    <LinearLayout
+        android:background="#f5f6fa"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/photo1"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:text="anna conda"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="510dp">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:src="@drawable/photo1"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        <TextView
+            android:textSize="15dp"
+            android:layout_marginLeft="15dp"
+            android:text="alors ?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+            <TextView
+                android:gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_gravity="right"
+                android:textSize="15dp"
+                android:text="je confirme notre reunion"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:background="@drawable/message"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:hint="ecrivez votre message"
+            android:layout_width="300dp"
+            android:layout_height="40dp" />
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:tint="#0652DD"
+            android:src="@drawable/send"
+            android:layout_gravity="center"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

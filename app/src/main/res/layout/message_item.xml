@@ -9,6 +9,7 @@
     android:layout_height="wrap_content">
 
     <RelativeLayout
+        android:id="@+id/rellayout"
         android:layout_gravity="right"
         android:orientation="vertical"
         android:layout_width="match_parent"

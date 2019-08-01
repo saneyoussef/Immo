@@ -7,10 +7,14 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,6 +23,7 @@ import java.util.List;
 
 public class MessagesActivity extends AppCompatActivity {
 
+    RelativeLayout relativeLayout ;
     MessagesAdapter messagesAdapter ;
     List<Messageitem> mData ;
     TextView textView ;
@@ -36,6 +41,7 @@ public class MessagesActivity extends AppCompatActivity {
         setupBottonNavigationView();
         textView = (TextView) findViewById(R.id.textview);
         rv = (RecyclerView) findViewById(R.id.messagesrecycler);
+
         mData = new ArrayList<>();
         mData.add(new Messageitem("anna conda","je serais disponible le lundi","dim",R.drawable.photo1));
         mData.add(new Messageitem("james bolton","rendez_vous confirmé pour le 13/08","dim",R.drawable.ahmed));

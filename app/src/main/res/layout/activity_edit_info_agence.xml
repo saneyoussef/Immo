@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditInfoAgenceActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:background="#ffffff"
+        android:elevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/baack"
+                android:layout_alignParentLeft="true"
+                android:tint="#5e5e5f"
+                android:src="@drawable/clean"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+            <TextView
+                android:textColor="#000000"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginLeft="50dp"
+                android:textSize="18dp"
+                android:text="modifier info agence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/confirm"
+                android:layout_marginRight="15dp"
+                android:layout_alignParentRight="true"
+                android:tint="#30A9DE"
+                android:src="@drawable/confirm"
+                android:layout_width="40dp"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        android:layout_width="350dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom de l'agence"
+            />
+        <EditText
+            android:background="@null"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="Les 3 M"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adresse"
+            />
+        <EditText
+            android:background="@null"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="Avenue les champs elysee monastir"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adresse mail"
+            />
+        <EditText
+            android:background="@null"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="drira.yasminee@gmail.com"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="numero"
+            />
+        <EditText
+            android:background="@null"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="** *** ***"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fax"
+            />
+        <EditText
+            android:background="@null"
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="** *** ***"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

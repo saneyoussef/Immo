@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    tools:context=".ProfilCommun">
+
+    <androidx.appcompat.widget.Toolbar
+        android:background="#ffffff"
+        android:elevation="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+      <ImageView
+          android:id="@+id/back"
+          android:layout_alignParentLeft="true"
+          android:tint="#5e5e5f"
+          android:src="@drawable/back"
+          android:layout_width="40dp"
+          android:layout_height="match_parent" />
+        <TextView
+            android:textColor="#000000"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:textSize="18dp"
+            android:text="profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_gravity="center"
+            android:src="@drawable/com_facebook_profile_picture_blank_portrait"
+            android:layout_width="80dp"
+            android:layout_height="80dp" />
+        <TextView
+            android:textColor="#30A9DE"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="Changer la photo"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/edit"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:tint="#000000"
+            android:src="@drawable/edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_width="350dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom"
+            />
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="Drira"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prenom"
+            />
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="Yasmine"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="adresse mail"
+            />
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="drira.yasminee@gmail.com"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+        <TextView
+            android:layout_marginTop="15dp"
+            android:textSize="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="numero personnel"
+            />
+        <TextView
+            android:textSize="15dp"
+            android:textColor="#000000"
+            android:text="21 788 883"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="22dp" />
+    </LinearLayout>
+
+</LinearLayout>
